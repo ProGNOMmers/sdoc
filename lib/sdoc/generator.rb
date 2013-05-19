@@ -29,6 +29,8 @@ class RDoc::AnyMethod
 
   TITLE_AFTER = %w(def class module)
 
+  FORCE_MAIN_PAGE = ENV['SDOC_FORCE_MAIN_PAGE']
+
   ##
   # Turns the method's token stream into HTML.
   #
@@ -334,6 +336,9 @@ class RDoc::Generator::SDoc
 
   ### Determines index path based on @options.main_page (or lack thereof)
   def index_path
+    # Allow to ignore even parsed rdoc directives
+    @options.main_page = FORCE_MAIN_PAGE if FORCE_MAIN_PAGE
+
     # Break early to avoid a big if block when no main page is specified
     default = @files.first.path
     return default unless @options.main_page
