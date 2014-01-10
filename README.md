@@ -1,5 +1,7 @@
 # SDoc
 
+[![Build Status](https://travis-ci.org/zzak/sdoc.png?branch=master)](https://travis-ci.org/zzak/sdoc)
+
 **Powering http://api.rubyonrails.org/ and http://railsapi.com/**
 
 ### What is sdoc?
@@ -7,7 +9,7 @@
 RDoc generator to build searchable HTML documentation for Ruby code.
 
 * `sdoc` - command line tool to run rdoc with `generator=shtml` (searchable HTML)
-* `sdoc-merge` - comand line tool to merge multiple sdoc folders into a single documentation site
+* `sdoc-merge` - command line tool to merge multiple sdoc folders into a single documentation site
 
 
 ### Getting Started
@@ -64,3 +66,4 @@ end
 
 * Vladimir Kolesnikov ([voloko](https://github.com/voloko))
 * Nathan Broadbent ([ndbroadbent](https://github.com/ndbroadbent))
+* Zachary Scott ([zzak](https://github.com/zzak))
