@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = %q{rdoc generator html with javascript search index.}
   s.summary = %q{rdoc html with javascript search index.}
   s.homepage = %q{http://github.com/voloko/sdoc}
-  s.email = %q{voloko@gmail.com}
+  s.email = %q{voloko@gmail.com zachary@zacharyscott.net}
   s.license = 'MIT'
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6") if
@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = ["README.md"]
 
-  s.add_runtime_dependency('rdoc', "~> 4.0", "< 5.0")
+  s.add_runtime_dependency("rdoc", "~> 4.0")
 
   if defined?(JRUBY_VERSION)
     s.platform = Gem::Platform.new(['universal', 'java', nil])
-    s.add_runtime_dependency("json_pure", ">= 1.1.3")
+    s.add_runtime_dependency("json_pure", "~> 1.8")
   else
-    s.add_runtime_dependency("json", ">= 1.1.3")
+    s.add_runtime_dependency("json", "~> 1.8")
   end
 
   s.add_development_dependency "bundler", "~> 1.3"
