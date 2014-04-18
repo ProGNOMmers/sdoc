@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require_relative 'lib/sdoc.rb'
+$:.push File.expand_path("../lib", __FILE__)
+require 'sdoc/version'
 
 Gem::Specification.new do |s|
   s.name = "sdoc"
@@ -22,9 +23,9 @@ Gem::Specification.new do |s|
 
   if defined?(JRUBY_VERSION)
     s.platform = Gem::Platform.new(['universal', 'java', nil])
-    s.add_runtime_dependency("json_pure", "~> 1.8")
+    s.add_runtime_dependency("json_pure", "~> 1.7", ">= 1.7.7")
   else
-    s.add_runtime_dependency("json", "~> 1.8")
+    s.add_runtime_dependency("json", "~> 1.7", ">= 1.7.7")
   end
 
   s.add_development_dependency "bundler", "~> 1.3"
